@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1179876125C3E367007B40B3 /* PlanetZoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1179876025C3E367007B40B3 /* PlanetZoomViewController.swift */; };
 		1183174825C3B854003A3A22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183174725C3B854003A3A22 /* AppDelegate.swift */; };
 		1183174A25C3B854003A3A22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183174925C3B854003A3A22 /* SceneDelegate.swift */; };
 		1183174C25C3B854003A3A22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183174B25C3B854003A3A22 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1179876025C3E367007B40B3 /* PlanetZoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetZoomViewController.swift; sourceTree = "<group>"; };
 		1183174425C3B854003A3A22 /* PlanetsExplore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanetsExplore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1183174725C3B854003A3A22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1183174925C3B854003A3A22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				1183175225C3B859003A3A22 /* LaunchScreen.storyboard */,
 				1183175525C3B859003A3A22 /* Info.plist */,
 				1183175D25C3BBE5003A3A22 /* PlanetViewCell.swift */,
+				1179876025C3E367007B40B3 /* PlanetZoomViewController.swift */,
 			);
 			path = PlanetsExplore;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1179876125C3E367007B40B3 /* PlanetZoomViewController.swift in Sources */,
 				1183174C25C3B854003A3A22 /* ViewController.swift in Sources */,
 				1183174825C3B854003A3A22 /* AppDelegate.swift in Sources */,
 				1183175E25C3BBE5003A3A22 /* PlanetViewCell.swift in Sources */,

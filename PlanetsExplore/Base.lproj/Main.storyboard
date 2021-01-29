@@ -70,7 +70,7 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="duW-ne-GI1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="G8M-eV-06d"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="duW-ne-GI1" secondAttribute="bottom" id="I7Y-Xn-YS7"/>
@@ -83,6 +83,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-72" y="86"/>
+        </scene>
+        <!--Planet Zoom View Controller-->
+        <scene sceneID="rV3-OP-38k">
+            <objects>
+                <viewController storyboardIdentifier="planetZoomVC" id="rVS-OT-wOA" customClass="PlanetZoomViewController" customModule="PlanetsExplore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4nK-Zg-ACb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fjr-Y0-mX2">
+                                <rect key="frame" x="0.0" y="90" width="414" height="302"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="302" id="uvd-8E-4bT"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6J-jg-zja">
+                                <rect key="frame" x="0.0" y="425" width="414" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="Tpf-3S-naF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="highlightedColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="e4e-hP-TyS" firstAttribute="trailing" secondItem="I6J-jg-zja" secondAttribute="trailing" id="4Dl-F9-h17"/>
+                            <constraint firstItem="I6J-jg-zja" firstAttribute="top" secondItem="fjr-Y0-mX2" secondAttribute="bottom" constant="33" id="JZB-l2-mnx"/>
+                            <constraint firstItem="I6J-jg-zja" firstAttribute="leading" secondItem="e4e-hP-TyS" secondAttribute="leading" id="LX2-IY-Tsf"/>
+                            <constraint firstItem="fjr-Y0-mX2" firstAttribute="trailing" secondItem="e4e-hP-TyS" secondAttribute="trailing" id="T4Z-Ro-Urc"/>
+                            <constraint firstItem="fjr-Y0-mX2" firstAttribute="leading" secondItem="e4e-hP-TyS" secondAttribute="leading" id="ebM-Wo-uJN"/>
+                            <constraint firstItem="fjr-Y0-mX2" firstAttribute="top" secondItem="e4e-hP-TyS" secondAttribute="top" constant="46" id="zm8-l3-D9u"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="e4e-hP-TyS"/>
+                    </view>
+                    <connections>
+                        <outlet property="planetImage" destination="fjr-Y0-mX2" id="3ST-P3-Ftg"/>
+                        <outlet property="planetName" destination="I6J-jg-zja" id="A44-jH-SWo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Num-SN-cQf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="807.24637681159425" y="85.714285714285708"/>
         </scene>
     </scenes>
 </document>

@@ -35,13 +35,22 @@ class ViewController: UIViewController {
         list.append(Planet(planetImage: #imageLiteral(resourceName: "uranus"), planetName  : "Uranus"))
         list.append(Planet(planetImage: #imageLiteral(resourceName: "neptune"), planetName  : "Nepturn"))
     }
-
+    
+    func navigateToNextScreen(model: Planet) {
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "planetZoomVC") as! PlanetZoomViewController
+        newViewController.modelTapped = model
+                self.present(newViewController, animated: true, completion: nil)
+    }
+    
+    
+ 
 
 }
 
 extension ViewController : UICollectionViewDataSource,UICollectionViewDelegate{
     
-   
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return list.count
@@ -49,17 +58,37 @@ extension ViewController : UICollectionViewDataSource,UICollectionViewDelegate{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        var modelAtIndex = list[indexPath.row]
+        let modelAtIndex = list[indexPath.row]
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "planet_itemview", for: indexPath) as! PlanetViewCell
         
         cell.bind(model: modelAtIndex)
+//        cell.addGestureRecognizer(
+//            UITapGestureRecognizer(
+//            target:self,
+//            action: #selector(tap(_:))
+//            )
+//        )
         
         return cell
         
-        
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let modelAtIndex = list[indexPath.row]
+        navigateToNextScreen(model :modelAtIndex)
+    }
+    
+//    @objc func tap(_ sender: UITapGestureRecognizer) {
+//
+//        let index = sender.index
+//        navigateToNextScreen()
+//    }
+    
+ 
+  
 }
+
+
 
 
