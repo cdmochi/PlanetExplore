@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PlanetsExplore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="duW-ne-GI1">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0C4-IT-atN">
+                                    <size key="itemSize" width="179" height="174"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="planet_itemview" id="BoA-Ez-Wl9" customClass="PlanetViewCell" customModule="PlanetsExplore" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="179" height="174"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bcD-JI-Cwe">
+                                            <rect key="frame" x="0.0" y="0.0" width="179" height="174"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8GW-0T-pky">
+                                                    <rect key="frame" x="8" y="8" width="163" height="120"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="120" id="nxI-o5-LtI"/>
+                                                        <constraint firstAttribute="width" constant="163" id="pJh-bj-Ox2"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6VP-GO-HOL">
+                                                    <rect key="frame" x="0.0" y="136" width="179" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="8GW-0T-pky" secondAttribute="trailing" constant="8" id="BvJ-lZ-eGT"/>
+                                                <constraint firstItem="6VP-GO-HOL" firstAttribute="leading" secondItem="bcD-JI-Cwe" secondAttribute="leading" id="VpD-ia-gUV"/>
+                                                <constraint firstAttribute="bottom" secondItem="6VP-GO-HOL" secondAttribute="bottom" constant="17" id="Zgm-SO-At1"/>
+                                                <constraint firstItem="6VP-GO-HOL" firstAttribute="top" secondItem="8GW-0T-pky" secondAttribute="bottom" constant="8" id="aea-Mt-DNg"/>
+                                                <constraint firstItem="8GW-0T-pky" firstAttribute="leading" secondItem="bcD-JI-Cwe" secondAttribute="leading" constant="8" id="bai-4y-0U6"/>
+                                                <constraint firstAttribute="trailing" secondItem="6VP-GO-HOL" secondAttribute="trailing" id="lP9-1K-f6W"/>
+                                                <constraint firstItem="8GW-0T-pky" firstAttribute="top" secondItem="bcD-JI-Cwe" secondAttribute="top" constant="8" id="vcP-bI-7BO"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="179" height="174"/>
+                                        <connections>
+                                            <outlet property="planetImage" destination="8GW-0T-pky" id="VBk-y6-ZTc"/>
+                                            <outlet property="planetName" destination="6VP-GO-HOL" id="Ygd-zs-obS"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="P0h-3B-n21"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="s5W-e6-5op"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="duW-ne-GI1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="G8M-eV-06d"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="duW-ne-GI1" secondAttribute="bottom" id="I7Y-Xn-YS7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="duW-ne-GI1" secondAttribute="trailing" id="Mve-xP-XkZ"/>
+                            <constraint firstItem="duW-ne-GI1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dRG-TZ-NCO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-72" y="86"/>
+        </scene>
+    </scenes>
+</document>
